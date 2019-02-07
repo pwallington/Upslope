@@ -12,7 +12,7 @@
     "cors": "*",
     "express": "*",
     "mongoose": "*",
-    "nodemon": "*",
+    "nodemon": "*"
   },
   "author": "Jay Wang",
   "license": "ISC"
