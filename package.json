@@ -1,0 +1,19 @@
+{
+  "name": "upslope",
+  "version": "1.0.0",
+  "description": "Pre-Apex demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "mongoose": "*",
+    "nodemon": "*",
+  },
+  "author": "Jay Wang",
+  "license": "ISC"
+}
