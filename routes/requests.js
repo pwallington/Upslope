@@ -46,7 +46,11 @@ router.get('/response', (req, res) => {
 
 router.get('/ale_messages', (req, res) => {
     Req.getAttrByTitle(req.query.title, 'ale_messages', (err, attrVal) => {
-        res.send(err ? err : attrVal)
+        if(err) {
+            return res.send(err)
+        }
+
+        res.send(attrVal.join('\r\n\r\n'))
     });
 });
 
