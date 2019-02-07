@@ -49,3 +49,18 @@ module.exports.getAttrByTitle = function(title, attr, callback) {
         callback(err, returnedReq ? returnedReq[attr] : null);
     });
 };
+
+module.exports.getList = function(callback) {
+    Req.find({}, 'title', (err, docs) => {
+        if (err) {
+            throw err;
+        }
+        console.log(docs);
+        let titles = [];
+        docs.forEach(doc => {
+            console.log("Push "+doc['title']);
+            titles.push(doc['title'])
+        });
+        callback(err, titles);
+    });
+};

@@ -60,6 +60,12 @@ router.get('/description', (req, res) => {
     });
 });
 
+router.get('/list', (req, res) => {
+    Req.getList((err, list) => {
+        res.send(list)
+    });
+});
+
 //Profile
 router.get('/', (req, res, next) => {
     Req.getReqByTitle(req.query.title, (err, returnedReq) => {
